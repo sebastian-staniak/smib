@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="qandaApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="smib">
+        <input type="text" placeholder="Input some characters..." ng-model="searchText">
+            <div ng-repeat="item in qAndAs | filter:searchText">
+                <h5><a href="https://www.google.pl/search?q={{item.question}}">{{ item.question }}</a></h5>
+                <p>{{item.answer}}</p>
+            </div>
+    </div>
+</body>
+</html>
