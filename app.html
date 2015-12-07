@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="angular.js"></script>
-    <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="src/data.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="robots" content="noindex,nofollow">
+
 </head>
 <body>
     <div ng-controller="smib">
-        <input type="text" placeholder="Input some characters..." ng-model="searchText">
+        <div class="search-box">
+            <input type="text" placeholder="Input some characters..." ng-model="searchText">
+        </div>
+        <div class="content">
             <div ng-repeat="item in qAndAs | filter:searchText">
                 <h5><a href="https://www.google.pl/search?q={{item.question}}">{{ item.question }}</a></h5>
                 <p>{{item.answer}}</p>
             </div>
+        </div>
     </div>
 </body>
 </html>

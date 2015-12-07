@@ -1,0 +1,43 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    width: 100%;
+    background: #ddd;
+}
+
+.search-box {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    max-height: 100px;
+    top: 0;
+    left: 0;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 50px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.content h5 {
+    font-size: 0.75rem;
+}
+
+.content h5 a {
+    text-decoration: none;
+}
+
+.content p {
+    font-size: 1rem;
+}
